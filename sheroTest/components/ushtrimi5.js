@@ -8,7 +8,7 @@ const returnLastDayOfTheMonth = (month) => {
     return d;
 }
 
-zgjidhja5.innerHTML = `<input type="number" max="11" id="monthInput"><button id="checkLastDate">Submit</button><span id="lastDay">Month is not selected</span>`;
+zgjidhja5.innerHTML = `<input type="number" min="0" max="11" id="monthInput"><button id="checkLastDate">Submit</button><span id="lastDay">Month is not selected</span>`;
 
 const input = document.getElementById("monthInput");
 const checkLastDate = document.getElementById("checkLastDate");
