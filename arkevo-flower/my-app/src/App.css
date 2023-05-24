@@ -1,0 +1,187 @@
+body {
+  background: #f2f2f2;
+}
+body, body * {
+  font-family: "Ubuntu", sans-serif;
+}
+body .special-c, body .special-c:hover, body .special-c:active, body .special-c:not(.btn-check) + .btn:active {
+  color: #DF9186 !important;
+  background-color: transparent !important;
+  border: none;
+}
+body .special-c:focus, body .special-c:focus-visible {
+  border: none;
+}
+body .special-bg, body .special-bg:hover, body .special-bg:active {
+  background: linear-gradient(270deg, #ECBCB3 0%, #EAA79E 100%);
+  color: #fff;
+  border: none;
+}
+body .special-bg.createAcc, body .special-bg:hover.createAcc, body .special-bg:active.createAcc {
+  width: 140px;
+  border-radius: 40px;
+}
+body .special-bg.login, body .special-bg:hover.login, body .special-bg:active.login {
+  height: 50px;
+}
+body .special-bg:focus, body .special-bg:focus-visible {
+  border: none;
+}
+body #heroContainer > div {
+  height: 40vw;
+}
+@media (max-width: 1199px) {
+  body #heroContainer {
+    min-height: 40vh;
+  }
+  body #heroContainer > div {
+    min-height: 40vh;
+  }
+}
+body #flower-container .flower-card {
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 0px;
+}
+@media (min-width: 769px) and (max-width: 991px) {
+  body #flower-container .flower-card {
+    width: 100rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  body #flower-container .flower-card {
+    width: calc(29rem - 1px);
+    height: 36.25rem;
+  }
+  body #flower-container .flower-card:not(:nth-child(2n)) {
+    margin-right: 10px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  body #flower-container .flower-card {
+    width: calc(23rem - 3px);
+    height: 31.25rem;
+  }
+  body #flower-container .flower-card:not(:nth-child(3n)) {
+    margin-right: 10px;
+  }
+}
+@media (min-width: 1400px) {
+  body #flower-container .flower-card {
+    width: calc(20rem - 5px);
+    height: 25rem;
+  }
+  body #flower-container .flower-card:not(:nth-child(4n)) {
+    margin-right: 10px;
+  }
+}
+body #flower-container .flower-card > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-end;
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 89.5%);
+}
+body #flower-container .flower-card > div .name {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+body #flower-container .flower-card > div .name, body #flower-container .flower-card > div .name-latin {
+  color: rgb(255, 255, 255);
+}
+body #flower-container .flower-card > div .name-latin {
+  margin-bottom: 20px;
+  font-size: 12px;
+  opacity: 0.7;
+  font-style: italic;
+}
+body #flower-container .flower-card > div > button {
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  width: -moz-max-content;
+  width: max-content;
+  height: 40px;
+  padding: 0px 10px;
+  border-radius: 20px;
+  transition: all ease-in-out 0.3s;
+}
+body #flower-container .flower-card > div > button:hover {
+  background: linear-gradient(270deg, #ECBCB3 0%, #EAA79E 100%);
+  color: #fff;
+}
+body .modal-content {
+  border-radius: 3px;
+}
+body .modal-content .form-data {
+  background: #DFE5EA;
+  border-radius: 3px;
+}
+body .modal-content .form-data:not(:last-child) {
+  margin-bottom: 10px;
+}
+body .modal-content .form-data label {
+  margin-left: 10px;
+  font-size: 10px;
+  color: #949EA0;
+}
+body .modal-content .form-data input.form-control, body .modal-content .form-data input.form-control:-internal-autofill-selected, body .modal-content .form-data input.form-control:-webkit-autofill {
+  background-color: transparent !important;
+  border: none;
+  border-radius: 0;
+}
+body .modal-content .form-data input.form-control:focus, body .modal-content .form-data input.form-control:focus-visible {
+  outline: none;
+  stroke: none;
+  box-shadow: none;
+}
+body .modal-content .form-full {
+  display: flex;
+  margin-bottom: 10px;
+}
+body .modal-content .form-full .form-data {
+  margin-bottom: 0;
+}
+@media (max-width: 769px) {
+  body .navbar > .container .navbar-toggler, body .navbar > .container .navbar-toggler:hover, body .navbar > .container .navbar-toggler:active, body .navbar > .container .navbar-toggler:focus, body .navbar > .container .navbar-toggler:focus-visible {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+  body .navbar > .container .navbar-collapse .navbar-nav {
+    background: #fff;
+    padding: 10px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+body .fav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+body .form-data-profile {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  align-items: flex-start;
+}
+body .flow-column {
+  flex-flow: column;
+  margin-left: 20px;
+}
+body .modal-content .mb-2, body .modal-content .mb-2 > button {
+  width: 100%;
+}
+body .modal-content .mb-2 > button {
+  background: linear-gradient(270deg, #ECBCB3 0%, #EAA79E 100%);
+  box-shadow: 0px 15px 20px rgba(234, 168, 159, 0.2);
+  border-radius: 3px;
+}/*# sourceMappingURL=app.css.map */

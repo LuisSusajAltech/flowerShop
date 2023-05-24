@@ -1,0 +1,1 @@
+export const endpoint = "https://flowrspot-api.herokuapp.com/api/v1/";
