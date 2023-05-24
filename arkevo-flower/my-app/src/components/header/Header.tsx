@@ -5,7 +5,9 @@ import Button from 'react-bootstrap/esm/Button';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 import Logo from "../../assets/logo.svg";
 import { Modal, Form } from 'react-bootstrap';
-import { useState , useEffect } from 'react';
+import { useState , 
+    // useEffect 
+} from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { endpoint } from '../api/api';
@@ -76,7 +78,7 @@ function Header({authData, setIsAuth, isAuth, setAuthData, token, setToken} : He
             if(email !== "" && password !== ""){
                 if(data.auth_token){
                     handleClose();
-                    // setShowSuccessfulLogIn(true)
+                    setShowSuccessfulLogIn(true)
                     const resToken = data.auth_token;
                     const headers = {
                         'Accept':'application/json',
@@ -159,7 +161,7 @@ function Header({authData, setIsAuth, isAuth, setAuthData, token, setToken} : He
             <>
             <div>
                 <button style={{border:0,background:"transparent",}} onClick={openProfile}>
-                    <img src={userSvg} className="rounded-circle img-fluid" style={{width:40,}} />
+                    <img src={userSvg} className="rounded-circle img-fluid" style={{width:40,}} alt="user-icon"/>
                 </button>
             </div>
             <Modal show={showProfile} onHide={handleProfileClose} centered >
@@ -189,6 +191,14 @@ function Header({authData, setIsAuth, isAuth, setAuthData, token, setToken} : He
           </div>
         </div>
             </Modal>
+            <Modal show={showSuccessfulLogIn} onHide={handleCloseSuccessfulLogIn} centered>
+                <Modal.Header style={{justifyContent:'center',paddingBottom:0, borderBottom:0,}}>
+                    <Modal.Title>Congratulations! You have successfully logged into FlowrSpot!</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Button variant="primary" type="submit" style={{width:"100%", marginTop:20,}} className='special-bg login' onClick={handleCloseSuccessfulLogIn}>Ok</Button>
+                </Modal.Body>
+            </Modal>
             </> 
             : <>
             <Button className='special-c' onClick={handleShow}>Login</Button>
@@ -211,14 +221,6 @@ function Header({authData, setIsAuth, isAuth, setAuthData, token, setToken} : He
                     Log In
                     </Button>
                 </Form>
-                </Modal.Body>
-            </Modal>
-            <Modal show={showSuccessfulLogIn} onHide={handleCloseSuccessfulLogIn} centered>
-                <Modal.Header style={{justifyContent:'center',paddingBottom:0, borderBottom:0,}}>
-                    <Modal.Title>Congratulations! You have successfully logged into FlowrSpot!</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Button variant="primary" type="submit" style={{width:"100%", marginTop:20,}} className='special-bg login' onClick={handleCloseSuccessfulLogIn}>Ok</Button>
                 </Modal.Body>
             </Modal>
             <Button className='special-bg createAcc' onClick={handleShowSignUp}>New Account</Button>
